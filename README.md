@@ -29,6 +29,6 @@ The `report` directory contains a detailed report summarizing the approach to th
 ## Additional Notes
 
 - The code is written in Python and requires the installation of ROS and the necessary packages.
-- For any questions or clarifications, please contact [your_email@example.com].
+- For any questions or clarifications, please contact [shivasaikrishna23@gmail.com].
 
 © Krishna

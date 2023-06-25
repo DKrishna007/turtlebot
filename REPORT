@@ -1,0 +1,58 @@
+Robotics Assignment Report
+Introduction:
+This report presents the implementation and results of the Robotics Assignment, which aimed to achieve specific goals using ROS (Robot Operating System) and TurtleSim. The assignment involved developing code to control a turtle in a simulated 2D environment, performing tasks such as navigation, creating grid patterns, and simulating chase scenarios between turtles.
+
+Goals:
+The assignment consisted of the following goals:
+
+Control turtle: Implement a PID controller to navigate the turtle to a target location efficiently.
+Make a grid: Create a grid pattern using the turtle's movement while considering acceleration and deceleration limitations.
+Rotate turtle in a circle: Program the turtle to move in circles, publishing its pose and a noisy pose.
+Chase turtle fast: Simulate a chase scenario between two turtles, with the Police Turtle attempting to catch the Robber Turtle.
+Chase turtle slow: Extend the chase scenario, with the Police Turtle moving at a slower speed compared to the Robber Turtle.
+Chase turtle noisy: Enhance the chase scenario by estimating the Robber Turtle's position based on its noisy pose.
+
+Approach:
+Goal 1: Control turtle
+We implemented a PID controller to control the turtle's linear and angular velocities, allowing it to reach the target location while minimizing overshooting. By tuning the PID gains, we achieved efficient navigation and evaluated the performance variation for different gain values.
+
+Goal 2: Make a grid
+To create a grid pattern, we introduced limitations on maximum acceleration and deceleration. This ensured a realistic deceleration profile for the turtle, mimicking real-life vehicle behavior. We adjusted the PID gains if necessary and captured videos for different acceleration and deceleration profiles, accompanied by plots demonstrating the maintenance of acceleration and deceleration limitations.
+
+Goal 3: Rotate turtle in a circle
+We programmed the turtle to move in circles with controllable speed and radius. We published the turtle's pose and added a random Gaussian noise to simulate noisy pose estimation. This goal allowed us to practice publishing and subscribing to topics in ROS.
+
+Goal 4: Chase turtle fast
+In this chase scenario, we introduced two turtles: the Robber Turtle (RT) and the Police Turtle (PT). The RT moved in circles, while the PT attempted to chase and catch the RT. The PT had access to the RT's real position through a topic, allowing it to move at a higher speed and initiate the chase when the distance between them was within a certain threshold.
+
+Goals 5 and 6: Chase turtle slow and Chase turtle noisy
+We extended the chase scenario by introducing variations. In Goal 5, the PT could only move at half the speed of the RT, creating a more challenging chase. In Goal 6, we estimated the RT's position based on its noisy pose, requiring a better estimator to predict its trajectory accurately.
+
+Results:
+We successfully achieved all the assigned goals and obtained the following results:
+
+Goal 1: The turtle efficiently navigated to the target location using the PID controller, minimizing overshooting.
+Goal 2: The turtle created grid patterns while adhering to acceleration and deceleration limitations.
+Goal 3: The turtle rotated in circles, publishing both the real and noisy poses.
+Goal 4: The PT successfully chased and caught the RT, demonstrating the effectiveness of the chase scenario.
+Goals 5 and 6: The PT chased the RT with slower speed and estimated its position based on noisy pose, showcasing advanced chase scenarios.
+Detailed videos and plots illustrating the results for each goal are provided in the accompanying video and report files.
+
+Conclusion:
+The Robotics Assignment provided hands-on experience in implementing ROS and utilizing TurtleSim to accomplish various goals. I successfully developed code for navigation, grid creation, circle rotation, and chase scenarios. The project enhanced our understanding of PID controllers, pose estimation, topic publishing and subscribing, and robot behavior in simulated environments.
+
+By completing the assignment, we gained valuable insights into robotics control and motion planning, reinforcing key concepts learned in the course. The project also highlighted the importance of parameter tuning and the challenges involved in estimating positions from noisy data.
+
+Overall, the Robotics Assignment was an enriching experience, combining theoretical knowledge with practical implementation to achieve the desired goals in a simulated robotic environment.
+
+Future Work:
+While we accomplished the assigned goals, there are opportunities for further improvement and exploration:
+
+Investigate advanced control techniques, such as adaptive control or model predictive control, for more precise navigation and tracking.
+Enhance the chase scenario by incorporating obstacles or dynamic environments, adding complexity to the pursuit and evasion strategies.
+Explore different noise models for pose estimation and evaluate their impact on the chase scenario's performance.
+Implement machine learning or reinforcement learning algorithms to enable autonomous decision-making by the turtles in the chase scenario.
+Contact Information
+For any inquiries or further information, please contact [shivasaikrishna23@gmail.com].
+
+© Krishna

@@ -1,0 +1,40 @@
+!) First, you need to start the ROS master node:
+
+bash
+{
+roscore
+}
+
+2) Then, in a new terminal, start the turtlesim node:
+
+bash
+{
+rosrun turtlesim turtlesim_node
+}
+
+3) Now, you can spawn the turtles. The turtlesim package provides a service called "spawn" that allows you to spawn a new turtle at a specified location and orientation. You can call this service using the "rosservice" command.
+
+In goals 4,5,6 to spawn the Robber Turtle (RT) at location (5, 5) with an orientation of 0 radians, you can use the following command:
+
+bash
+{
+rosservice call /spawn "x: 5.0
+y: 5.0
+theta: 0.0
+name: 'robber_turtle'"
+}
+
+4) To spawn the Police Turtle (PT) at a random location 10 seconds after the RT is launched, you can use a similar command. However, you'll need to replace the x and y coordinates with the desired values for the PT's initial location:
+
+bash
+{
+sleep 10
+rosservice call /spawn "x: 8.0
+y: 8.0
+theta: 0.0
+name: 'police_turtle'"
+}
+y: 8.0
+theta: 0.0
+name: 'police_turtle'"
+Please note that the "sleep 10" command is used to wait for 10 seconds 
